@@ -1,3 +1,5 @@
+provider "aws" {}
+
 module "context" {
   source = "github.com/spaceteams/terraform-space-context"
 
