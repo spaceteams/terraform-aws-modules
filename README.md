@@ -21,4 +21,8 @@ All components and modules in this repository make use of the [terraform-space-c
 
 ## Components
 
+  * [**ecr-private**](components/ecr-private)
+  
+    A private ECR container registry with encryption and lifetime policies by default. 
+
 ## Modules
