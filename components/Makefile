@@ -1,10 +1,10 @@
-TOPTARGETS := all test
+TOPTARGETS := all test docs
 
-SUBDIRS := $(wildcard */test/.)
+SUBDIRS := $(wildcard */.)
 
 $(TOPTARGETS): $(SUBDIRS)
 $(SUBDIRS):
-	@echo " == Testing $@ == "
+	@echo " == $@ == "
 	$(MAKE) -C $@ $(MAKECMDGOALS)
 
 .PHONY: $(TOPTARGETS) $(SUBDIRS)

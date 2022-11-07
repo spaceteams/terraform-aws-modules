@@ -15,9 +15,10 @@
         name = "terraform-aws-modules";
         packages = with pkgs; [
           terraform
-          jq
-          tflint
           terraform-ls
+          terraform-docs
+          tflint
+          jq
           pre-commit
           go
           gnumake

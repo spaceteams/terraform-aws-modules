@@ -1,5 +1,6 @@
+all: test
 
 test:
 	go test -v --run TestModule
 
-.PHONY: test
+.PHONY: all test
