@@ -1,0 +1,10 @@
+formatter: "markdown document"
+
+sections:
+  show:
+    - header
+    - inputs
+    - outputs
+
+settings:
+  hide-empty: true

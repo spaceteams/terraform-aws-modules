@@ -22,6 +22,14 @@ variable "context" {
     iam_permission_boundary = null
     tags                    = {}
   }
+
+  description = <<EOT
+    Set this to pass down a complete context.
+    This is usually used to pass down the 'outer' context,
+    ie. the context of module invoking this one.
+    See [terraform-space-context](https://github.com/spaceteams/terraform-space-context) documentation 
+    for details on how the context is commonly used.
+  EOT
 }
 
 variable "enabled" {

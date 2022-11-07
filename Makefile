@@ -1,4 +1,9 @@
-all: lint test
+all: docs lint test 
+
+docs:
+	@echo "=== Generating docs ==="
+	make -C components docs
+	make -C modules docs
 
 test:
 	@echo "=== Testing components ==="
@@ -10,4 +15,4 @@ lint:
 	@echo "=== Linting ==="
 	terraform fmt -check -recursive .
 
-.PHONY: all test lint
+.PHONY: all test docs lint
