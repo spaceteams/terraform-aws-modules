@@ -4,5 +4,5 @@
 .envrc
 .aws
 
-**/.terraform
-**/.terraform.tfstate*
+**/.terraform*
+**/terraform.tfstate*
