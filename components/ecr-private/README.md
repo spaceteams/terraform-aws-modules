@@ -54,7 +54,8 @@ Description:     Set this to pass down a complete context.
     This is usually used to pass down the 'outer' context,  
     ie. the context of module invoking this one.  
     See [terraform-space-context](https://github.com/spaceteams/terraform-space-context) documentation   
-    for details on how the context is commonly used.
+    for details on how the context is commonly used.  
+    All context values can be override via inputs on the module level.
 
 Type: `any`
 
@@ -80,22 +81,6 @@ Description: Wether or not to create the default lifecycle policies for all spec
 Type: `bool`
 
 Default: `true`
-
-### <a name="input_enabled"></a> [enabled](#input\_enabled)
-
-Description: Set this to false in order to disable this module
-
-Type: `bool`
-
-Default: `true`
-
-### <a name="input_iam_permission_boundary"></a> [iam\_permission\_boundary](#input\_iam\_permission\_boundary)
-
-Description: A global boundary permission ARN that will be set to all iam roles created
-
-Type: `string`
-
-Default: `null`
 
 ### <a name="input_image_names"></a> [image\_names](#input\_image\_names)
 
@@ -129,15 +114,6 @@ Type: `number`
 
 Default: `10`
 
-### <a name="input_name"></a> [name](#input\_name)
-
-Description:     The primary name or identifier of the resource.  
-    It will automatically be added to the list of tags as the 'name' tag.
-
-Type: `string`
-
-Default: `null`
-
 ### <a name="input_preserved_image_tags"></a> [preserved\_image\_tags](#input\_preserved\_image\_tags)
 
 Description: A list of tag prefixes for image tags that should be excempt from expiring.
@@ -153,22 +129,6 @@ Description: Whether or not images pushed to the registry should be scanned for 
 Type: `bool`
 
 Default: `true`
-
-### <a name="input_suffix"></a> [suffix](#input\_suffix)
-
-Description: A list of suffixes to be ammended te the label.
-
-Type: `list(string)`
-
-Default: `[]`
-
-### <a name="input_tags"></a> [tags](#input\_tags)
-
-Description: A set of tags added to the resource.
-
-Type: `map(string)`
-
-Default: `{}`
 
 ## Outputs
 

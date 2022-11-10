@@ -16,7 +16,14 @@
         packages = with pkgs; [
           terraform
           terraform-ls
-          terraform-docs
+          (terraform-docs.overrideAttrs(prev: {
+            patches = (prev.patches or []) ++ [
+              (fetchpatch{
+                url = "https://patch-diff.githubusercontent.com/raw/terraform-docs/terraform-docs/pull/651.patch";
+                sha256 = "sha256-5oxWlc4x9q3Xw/eWZKeY0ZPmiksk0SiW15ivreCf9tI=";
+              })
+            ];
+          }))
           tflint
           jq
           pre-commit
