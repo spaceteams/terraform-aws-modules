@@ -11,6 +11,7 @@ module "context" {
 }
 
 variable "context" {
+
   type = any
   default = {
     enabled                 = true
@@ -28,16 +29,19 @@ variable "context" {
     This is usually used to pass down the 'outer' context,
     ie. the context of module invoking this one.
     See [terraform-space-context](https://github.com/spaceteams/terraform-space-context) documentation 
-    for details on how the context is commonly used.
+    for details on how the context is commonly used.  
+    All context values can be override via inputs on the module level.
   EOT
 }
 
+# terraform-docs-ignore
 variable "enabled" {
   type        = bool
   default     = true
   description = "Set this to false in order to disable this module"
 }
 
+# terraform-docs-ignore
 variable "name" {
   type        = string
   default     = null
@@ -47,18 +51,21 @@ variable "name" {
   EOT
 }
 
+# terraform-docs-ignore
 variable "tags" {
   type        = map(string)
   default     = {}
   description = "A set of tags added to the resource."
 }
 
+# terraform-docs-ignore
 variable "suffix" {
   type        = list(string)
   default     = []
   description = "A list of suffixes to be ammended te the label."
 }
 
+# terraform-docs-ignore
 variable "iam_permission_boundary" {
   type        = string
   default     = null

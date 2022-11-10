@@ -45,7 +45,8 @@ Description:     Set this to pass down a complete context.
     This is usually used to pass down the 'outer' context,  
     ie. the context of module invoking this one.  
     See [terraform-space-context](https://github.com/spaceteams/terraform-space-context) documentation   
-    for details on how the context is commonly used.
+    for details on how the context is commonly used.  
+    All context values can be override via inputs on the module level.
 
 Type: `any`
 
@@ -93,22 +94,6 @@ Type: `bool`
 
 Default: `true`
 
-### <a name="input_enabled"></a> [enabled](#input\_enabled)
-
-Description: Set this to false in order to disable this module
-
-Type: `bool`
-
-Default: `true`
-
-### <a name="input_iam_permission_boundary"></a> [iam\_permission\_boundary](#input\_iam\_permission\_boundary)
-
-Description: A global boundary permission ARN that will be set to all iam roles created
-
-Type: `string`
-
-Default: `null`
-
 ### <a name="input_key_usage"></a> [key\_usage](#input\_key\_usage)
 
 Description: Specifies the intended use of the key.
@@ -116,31 +101,6 @@ Description: Specifies the intended use of the key.
 Type: `string`
 
 Default: `null`
-
-### <a name="input_name"></a> [name](#input\_name)
-
-Description:     The primary name or identifier of the resource.  
-    It will automatically be added to the list of tags as the 'name' tag.
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_suffix"></a> [suffix](#input\_suffix)
-
-Description: A list of suffixes to be ammended te the label.
-
-Type: `list(string)`
-
-Default: `[]`
-
-### <a name="input_tags"></a> [tags](#input\_tags)
-
-Description: A set of tags added to the resource.
-
-Type: `map(string)`
-
-Default: `{}`
 
 ## Outputs
 
