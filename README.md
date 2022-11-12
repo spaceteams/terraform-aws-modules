@@ -25,6 +25,10 @@ All components and modules in this repository make use of the [terraform-space-c
   
     A private ECR container registry with encryption and lifetime policies by default. 
 
+  * [**kms-key**](components/kms-key)
+  
+    A custom KMS key.
+
   * [**s3-bucket-private**](components/s3-bucket-private)
   
     A private and secure S3 bucket with encryption transport policies by default.
