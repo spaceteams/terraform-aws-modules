@@ -47,5 +47,5 @@ resource "aws_kms_alias" "this" {
   count = local.enabled ? 1 : 0
 
   name          = "alias/${coalesce(var.alias, module.context.label)}"
-  target_key_id = join("", aws_kms_key.this.*.id)
+  target_key_id = join("", [for key in aws_kms_key.this : key.id])
 }
