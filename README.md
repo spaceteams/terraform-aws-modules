@@ -21,6 +21,10 @@ All components and modules in this repository make use of the [terraform-space-c
 
 ## Components
 
+  * [**dynamodb**](components/dynamodb)
+  
+    A DynamoDB table
+
   * [**ecr-private**](components/ecr-private)
   
     A private ECR container registry with encryption and lifetime policies by default. 
